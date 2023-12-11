@@ -69,7 +69,7 @@ func endpoint(registry *Registry) func(w http.ResponseWriter, r *http.Request) {
 	return func(w http.ResponseWriter, r *http.Request) {
 		server, err := registry.Server(r.Host)
 		if err != nil {
-			log.Printf(err.Error())
+			log.Print(err.Error())
 			http.Error(w, http.StatusText(http.StatusBadRequest), http.StatusBadRequest)
 
 			return
