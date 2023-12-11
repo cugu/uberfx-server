@@ -7,8 +7,8 @@ on:
     - cron: '0 0 * * *'
 
 jobs:
-  uberfx-server:
-    name: uberfx-server
+  lint:
+    name: Lint
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
